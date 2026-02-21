@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - BoletaPE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,454 +14,1032 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --secondary: #10B981;
+            --dark: #0F172A;
+            --gray: #64748B;
+            --light-gray: #F1F5F9;
+            --white: #FFFFFF;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #374151;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 900px;
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            background: white;
-            border-radius: 20px;
-            display: inline-flex;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 10px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveGrid 20s linear infinite;
+        }
+
+        @keyframes moveGrid {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 800;
             margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            line-height: 1.1;
+            animation: fadeInUp 1s ease;
         }
 
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 50px 40px;
-        }
-
-        .intro {
-            background: #F3F4F6;
-            padding: 30px;
-            border-radius: 15px;
+        .hero p {
+            font-size: 1.4em;
+            opacity: 0.95;
             margin-bottom: 40px;
-            border-left: 5px solid #2563EB;
+            animation: fadeInUp 1s ease 0.2s both;
         }
 
-        .intro p {
-            font-size: 1.1em;
-            color: #1F2937;
-        }
-
-        h2 {
-            color: #1F2937;
-            font-size: 1.8em;
-            margin: 40px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #2563EB;
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 50px;
             font-weight: 600;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.1s both;
         }
 
-        h3 {
-            color: #374151;
-            font-size: 1.3em;
-            margin: 25px 0 15px 0;
-            font-weight: 600;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        p {
-            margin-bottom: 15px;
-            font-size: 1.05em;
-            color: #4B5563;
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
         }
 
-        ul {
-            margin: 15px 0 25px 0;
-            padding-left: 0;
+        /* Section */
+        .section {
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease;
         }
 
-        li {
-            background: #F9FAFB;
-            margin: 10px 0;
-            padding: 15px 20px;
-            border-radius: 10px;
-            list-style: none;
-            border-left: 4px solid #10B981;
-            font-size: 1.05em;
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
-        li:before {
-            content: "✓ ";
-            color: #10B981;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .highlight-box {
-            background: #FEF3C7;
-            border: 2px solid #F59E0B;
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             border-radius: 15px;
-            padding: 25px;
-            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .section p {
+            font-size: 1.1em;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-gray);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .card p {
+            font-size: 1em;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .card li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--light-gray);
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border-left: 5px solid #F59E0B;
         }
 
         .highlight-box h3 {
             color: #92400E;
-            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 15px;
         }
 
         .highlight-box p {
             color: #78350F;
+            font-size: 1.1em;
         }
 
-        .contact-box {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            margin: 40px 0;
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 30px;
+            padding: 60px;
             text-align: center;
+            color: white;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .contact-box h3 {
-            color: white;
-            border: none;
-            margin: 0 0 20px 0;
-            padding: 0;
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
         }
 
-        .contact-box p {
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
             color: white;
+        }
+
+        .contact-section p {
             font-size: 1.2em;
-            margin: 10px 0;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            color: white;
         }
 
-        .contact-box a {
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.05);
+        }
+
+        .contact-item a {
             color: white;
             text-decoration: none;
             font-weight: 600;
-            border-bottom: 2px solid white;
-            padding-bottom: 2px;
+            font-size: 1.1em;
         }
 
-        .footer {
-            background: #1F2937;
+        /* Footer */
+        footer {
+            background: var(--dark);
             color: white;
-            padding: 30px 40px;
+            padding: 60px 40px 30px;
             text-align: center;
         }
 
-        .footer p {
-            color: #9CA3AF;
-            margin: 5px 0;
+        footer p {
+            color: var(--gray);
+            margin: 10px 0;
         }
 
-        .last-updated {
-            background: #EFF6FF;
-            color: #1E40AF;
-            padding: 15px 25px;
-            border-radius: 10px;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Badge */
+        .badge {
             display: inline-block;
-            margin: 20px 0;
+            background: var(--light-gray);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9em;
             font-weight: 600;
+            margin-bottom: 20px;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
+            .nav-container {
+                padding: 15px 20px;
             }
 
-            .header {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .container {
                 padding: 40px 20px;
             }
 
-            .header h1 {
+            .section h2 {
                 font-size: 1.8em;
             }
 
-            .content {
-                padding: 30px 20px;
+            .card-grid {
+                grid-template-columns: 1fr;
             }
 
-            h2 {
-                font-size: 1.5em;
+            .contact-section {
+                padding: 40px 25px;
             }
 
-            .contact-box {
-                padding: 25px;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        .section-icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #2563EB;
-            color: white;
-            border-radius: 10px;
-            text-align: center;
-            line-height: 40px;
-            margin-right: 10px;
-            font-size: 20px;
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
         }
     </style>
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">📱</div>
+                <span>BoletaPE</span>
+            </div>
+            <div class="nav-links">
+                <a href="#informacion">Información</a>
+                <a href="#seguridad">Seguridad</a>
+                <a href="#derechos">Tus Derechos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">📋 Política de Privacidad</div>
+            <h1>Tu privacidad es nuestra prioridad</h1>
+            <p>En BoletaPE protegemos tu información con los más altos estándares de seguridad</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">📱</div>
-            <h1>BoletaPE</h1>
-            <p>Política de Privacidad</p>
+        <!-- Intro -->
+        <div class="section">
+            <div class="badge">Última actualización: Febrero 2026</div>
+            <p style="font-size: 1.2em; color: var(--dark); max-width: 800px;">
+                BoletaPE es una aplicación móvil de control de gastos personales diseñada para usuarios en Perú.
+                Esta política explica de manera clara y transparente cómo recopilamos, usamos y protegemos tu
+                información.
+            </p>
         </div>
 
-        <!-- Content -->
-        <div class="content">
-            <div class="intro">
-                <p><strong>En BoletaPE, tu privacidad es nuestra prioridad.</strong> Esta política explica de manera
-                    clara y transparente cómo recopilamos, usamos y protegemos tu información personal cuando utilizas
-                    nuestra aplicación de control de gastos.</p>
+        <!-- Información que Recopilamos -->
+        <div class="section" id="informacion">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2>Información que Recopilamos</h2>
             </div>
 
-            <div class="last-updated">
-                📅 Última actualización: Febrero 2026
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">👤</div>
+                    <h3>Datos de Cuenta</h3>
+                    <ul>
+                        <li>Nombre y apellido</li>
+                        <li>Correo electrónico</li>
+                        <li>Número de teléfono</li>
+                        <li>Contraseña encriptada</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Información Financiera</h3>
+                    <ul>
+                        <li>Gastos registrados</li>
+                        <li>Presupuestos y metas</li>
+                        <li>Categorías personalizadas</li>
+                        <li>Métodos de pago</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📸</div>
+                    <h3>Datos Opcionales</h3>
+                    <ul>
+                        <li>Fotos de boletas</li>
+                        <li>Ubicación (mapa)</li>
+                        <li>Notas personales</li>
+                        <li>Salario y ahorros</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Información Técnica</h3>
+                    <ul>
+                        <li>Modelo de dispositivo</li>
+                        <li>Sistema operativo</li>
+                        <li>Versión de la app</li>
+                        <li>Datos de uso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cómo Usamos tu Información -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>Cómo Usamos tu Información</h2>
             </div>
 
-            <!-- Sección 1 -->
-            <h2><span class="section-icon">📋</span> 1. Información que Recopilamos</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Funcionalidad</h3>
+                    <p>Registrar gastos, generar reportes personalizados, gestionar presupuestos y sincronizar datos en
+                        todos tus dispositivos.</p>
+                </div>
 
-            <h3>Información de Cuenta</h3>
-            <ul>
-                <li><strong>Nombre y apellido:</strong> Para personalizar tu experiencia</li>
-                <li><strong>Correo electrónico:</strong> Para autenticación y comunicación</li>
-                <li><strong>Número de teléfono:</strong> Para recuperación de cuenta y soporte</li>
-                <li><strong>Contraseña:</strong> Almacenada de forma encriptada</li>
-            </ul>
+                <div class="card">
+                    <div class="card-icon">🔔</div>
+                    <h3>Notificaciones</h3>
+                    <p>Enviarte alertas de presupuesto, recordatorios de gastos y notificaciones de ofertas en tiendas
+                        cercanas.</p>
+                </div>
 
-            <h3>Información Financiera</h3>
-            <ul>
-                <li><strong>Gastos registrados:</strong> Monto, fecha, categoría, tienda</li>
-                <li><strong>Presupuestos:</strong> Límites de gasto por categoría</li>
-                <li><strong>Metas de ahorro:</strong> Objetivos financieros personales</li>
-                <li><strong>Métodos de pago:</strong> Tipo de pago usado (sin datos bancarios)</li>
-            </ul>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Análisis</h3>
+                    <p>Generar gráficos, estadísticas y reportes financieros para ayudarte a tomar mejores decisiones.
+                    </p>
+                </div>
 
-            <h3>Información Opcional</h3>
-            <ul>
-                <li><strong>Fotos de boletas:</strong> Solo si decides escanear comprobantes</li>
-                <li><strong>Ubicación:</strong> Solo si activas el mapa de tiendas cercanas</li>
-                <li><strong>Notas personales:</strong> Comentarios que agregues a tus gastos</li>
-            </ul>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Seguridad</h3>
+                    <p>Prevenir fraudes, proteger tu cuenta y garantizar la integridad de tus datos personales.</p>
+                </div>
+            </div>
+        </div>
 
-            <h3>Información Técnica</h3>
-            <ul>
-                <li><strong>Dispositivo:</strong> Modelo, sistema operativo, versión de la app</li>
-                <li><strong>Uso de la app:</strong> Funciones utilizadas, tiempo de uso</li>
-                <li><strong>Dirección IP:</strong> Para seguridad y prevención de fraudes</li>
-            </ul>
+        <!-- Seguridad -->
+        <div class="section" id="seguridad">
+            <div class="section-header">
+                <div class="section-icon">🔒</div>
+                <h2>Seguridad de tus Datos</h2>
+            </div>
 
-            <!-- Sección 2 -->
-            <h2><span class="section-icon">🎯</span> 2. Cómo Usamos tu Información</h2>
+            <p style="font-size: 1.2em; max-width: 800px;">
+                Implementamos múltiples capas de seguridad para proteger tu información:
+            </p>
 
-            <p>Utilizamos tu información exclusivamente para:</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🔐</div>
+                    <h3>Encriptación</h3>
+                    <p>Todas las contraseñas están encriptadas y las comunicaciones usan HTTPS con certificados SSL/TLS.
+                    </p>
+                </div>
 
-            <ul>
-                <li><strong>Proporcionar el servicio:</strong> Registro de gastos, reportes, presupuestos</li>
-                <li><strong>Personalizar tu experiencia:</strong> Recomendaciones y análisis personalizados</li>
-                <li><strong>Generar reportes:</strong> Gráficos y estadísticas de tus finanzas</li>
-                <li><strong>Enviarte notificaciones:</strong> Alertas de presupuesto, recordatorios</li>
-                <li><strong>Mejorar la app:</strong> Análisis de uso para nuevas funciones</li>
-                <li><strong>Soporte técnico:</strong> Ayudarte con problemas o dudas</li>
-                <li><strong>Prevenir fraudes:</strong> Detectar y prevenir actividades sospechosas</li>
-                <li><strong>Cumplir obligaciones legales:</strong> Cuando lo requiera la ley peruana</li>
-            </ul>
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Firebase Security</h3>
+                    <p>Usamos Firebase Authentication y Firestore con reglas de seguridad estrictas certificadas
+                        internacionalmente.</p>
+                </div>
 
-            <!-- Sección 3 -->
-            <h2><span class="section-icon">🔒</span> 3. Almacenamiento y Seguridad</h2>
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Acceso Controlado</h3>
+                    <p>Solo tú puedes ver y modificar tus datos. Acceso restringido a personal autorizado únicamente.
+                    </p>
+                </div>
 
-            <p>Tus datos están protegidos con las mejores prácticas de seguridad:</p>
-
-            <ul>
-                <li><strong>Firebase (Google Cloud):</strong> Infraestructura certificada internacionalmente</li>
-                <li><strong>Encriptación en tránsito:</strong> SSL/TLS para todas las comunicaciones</li>
-                <li><strong>Encriptación en reposo:</strong> Datos encriptados en servidores</li>
-                <li><strong>Copias de seguridad:</strong> Backups automáticos diarios</li>
-                <li><strong>Acceso restringido:</strong> Solo personal autorizado puede acceder</li>
-                <li><strong>Monitoreo 24/7:</strong> Detección de amenazas en tiempo real</li>
-            </ul>
+                <div class="card">
+                    <div class="card-icon">💾</div>
+                    <h3>Backups Automáticos</h3>
+                    <p>Copias de seguridad diarias y monitoreo 24/7 para detectar amenazas en tiempo real.</p>
+                </div>
+            </div>
 
             <div class="highlight-box">
                 <h3>⚠️ Importante sobre Seguridad</h3>
-                <p>Aunque implementamos medidas de seguridad robustas, ningún sistema es 100% infalible. Te recomendamos
-                    usar contraseñas fuertes y no compartir tus credenciales con nadie.</p>
+                <p>Aunque implementamos las mejores prácticas de seguridad, ningún sistema es 100% infalible. Te
+                    recomendamos usar contraseñas fuertes y no compartir tus credenciales con nadie.</p>
             </div>
-
-            <!-- Sección 4 -->
-            <h2><span class="section-icon">🚫</span> 4. Compartir Información</h2>
-
-            <p><strong>NO vendemos ni compartimos tu información personal con terceros.</strong></p>
-
-            <p>Solo compartimos información en estos casos específicos:</p>
-
-            <ul>
-                <li><strong>Servicios necesarios:</strong> Firebase para almacenamiento, procesadores de pago seguros
-                </li>
-                <li><strong>Obligación legal:</strong> Cuando lo requiera una autoridad competente peruana</li>
-                <li><strong>Con tu consentimiento:</strong> Solo si nos das permiso explícito</li>
-                <li><strong>Datos agregados:</strong> Estadísticas anónimas sin identificación personal</li>
-            </ul>
-
-            <!-- Sección 5 -->
-            <h2><span class="section-icon">✅</span> 5. Tus Derechos</h2>
-
-            <p>Como usuario de BoletaPE, tienes los siguientes derechos:</p>
-
-            <ul>
-                <li><strong>Acceso:</strong> Ver toda tu información personal almacenada</li>
-                <li><strong>Corrección:</strong> Actualizar datos incorrectos o desactualizados</li>
-                <li><strong>Eliminación:</strong> Borrar tu cuenta y todos tus datos permanentemente</li>
-                <li><strong>Exportación:</strong> Descargar todos tus datos en formato portable</li>
-                <li><strong>Oposición:</strong> Negarte al procesamiento de ciertos datos</li>
-                <li><strong>Portabilidad:</strong> Transferir tus datos a otro servicio</li>
-                <li><strong>Retirar consentimiento:</strong> Cambiar permisos en cualquier momento</li>
-            </ul>
-
-            <p>Para ejercer cualquiera de estos derechos, contáctanos en: <strong>privacidad@boletape.com</strong></p>
-
-            <!-- Sección 6 -->
-            <h2><span class="section-icon">🍪</span> 6. Cookies y Tecnologías Similares</h2>
-
-            <p>BoletaPE utiliza tecnologías de seguimiento para mejorar tu experiencia:</p>
-
-            <ul>
-                <li><strong>Cookies de sesión:</strong> Mantener tu sesión activa</li>
-                <li><strong>Preferencias:</strong> Recordar tus configuraciones (tema, idioma)</li>
-                <li><strong>Análisis:</strong> Entender cómo usas la app para mejorarla</li>
-                <li><strong>Rendimiento:</strong> Optimizar velocidad y funcionalidad</li>
-            </ul>
-
-            <p>Puedes gestionar las cookies desde la configuración de tu dispositivo.</p>
-
-            <!-- Sección 7 -->
-            <h2><span class="section-icon">👶</span> 7. Menores de Edad</h2>
-
-            <p>BoletaPE no está dirigida a menores de 18 años. No recopilamos intencionalmente información de menores.
-                Si descubrimos que hemos recopilado datos de un menor, los eliminaremos inmediatamente.</p>
-
-            <p>Si eres padre/madre y crees que tu hijo nos ha proporcionado información, contáctanos de inmediato.</p>
-
-            <!-- Sección 8 -->
-            <h2><span class="section-icon">🔄</span> 8. Cambios en esta Política</h2>
-
-            <p>Podemos actualizar esta política periódicamente para reflejar cambios en nuestras prácticas o por
-                requisitos legales.</p>
-
-            <p>Te notificaremos sobre cambios importantes mediante:</p>
-            <ul>
-                <li>Notificación en la aplicación</li>
-                <li>Correo electrónico a tu cuenta registrada</li>
-                <li>Mensaje al iniciar sesión</li>
-            </ul>
-
-            <p>Te recomendamos revisar esta política regularmente.</p>
-
-            <!-- Sección 9 -->
-            <h2><span class="section-icon">🌍</span> 9. Transferencias Internacionales</h2>
-
-            <p>Tus datos pueden ser transferidos y procesados en servidores ubicados fuera de Perú (Google Cloud tiene
-                servidores globales). Garantizamos que todas las transferencias cumplen con:</p>
-
-            <ul>
-                <li>Estándares internacionales de protección de datos</li>
-                <li>Medidas de seguridad apropiadas</li>
-                <li>Cumplimiento con GDPR y leyes peruanas</li>
-            </ul>
-
-            <!-- Sección 10 -->
-            <h2><span class="section-icon">⚖️</span> 10. Base Legal</h2>
-
-            <p>Procesamos tu información personal bajo las siguientes bases legales:</p>
-
-            <ul>
-                <li><strong>Consentimiento:</strong> Aceptas estos términos al crear tu cuenta</li>
-                <li><strong>Ejecución de contrato:</strong> Necesario para proporcionar el servicio</li>
-                <li><strong>Interés legítimo:</strong> Mejorar y proteger nuestro servicio</li>
-                <li><strong>Obligación legal:</strong> Cumplir con leyes peruanas aplicables</li>
-            </ul>
-
-            <!-- Sección 11 -->
-            <h2><span class="section-icon">🛡️</span> 11. Protección de Datos</h2>
-
-            <p>BoletaPE cumple con:</p>
-            <ul>
-                <li>Ley N° 29733 - Ley de Protección de Datos Personales (Perú)</li>
-                <li>GDPR - Reglamento General de Protección de Datos (Europa)</li>
-                <li>Mejores prácticas internacionales de seguridad</li>
-            </ul>
-
-            <!-- Contacto -->
-            <div class="contact-box">
-                <h3>📞 ¿Tienes Preguntas sobre tu Privacidad?</h3>
-                <p>Estamos aquí para ayudarte</p>
-                <p>📧 Email: <a href="mailto:privacidad@boletape.com">privacidad@boletape.com</a></p>
-                <p>📱 WhatsApp: <a href="https://wa.me/51999999999">+51 999 999 999</a></p>
-                <p>📍 Ubicación: Lima, Perú</p>
-                <p>🕐 Horario: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
-            </div>
-
-            <!-- Oficial de Protección de Datos -->
-            <h2><span class="section-icon">👤</span> 12. Oficial de Protección de Datos</h2>
-
-            <p>Para consultas específicas sobre protección de datos, puedes contactar a nuestro Oficial de Protección de
-                Datos:</p>
-            <p><strong>Email:</strong> dpo@boletape.com</p>
-
-            <!-- Autoridad de Control -->
-            <h2><span class="section-icon">🏛️</span> 13. Autoridad de Control</h2>
-
-            <p>Si consideras que tus derechos de protección de datos han sido vulnerados, puedes presentar una queja
-                ante:</p>
-
-            <p><strong>Autoridad Nacional de Protección de Datos Personales</strong><br>
-                Ministerio de Justicia y Derechos Humanos<br>
-                Lima, Perú<br>
-                Web: <a href="https://www.minjus.gob.pe" style="color: #2563EB;">www.minjus.gob.pe</a></p>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p><strong>© 2026 BoletaPE. Todos los derechos reservados.</strong></p>
-            <p>Desarrollado con ❤️ en Perú 🇵🇪</p>
-            <p>Versión 1.0.0 | Última actualización: Febrero 2026</p>
+        <!-- Compartir Información -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🤝</div>
+                <h2>Compartir Información</h2>
+            </div>
+
+            <div style="background: var(--light-gray); padding: 40px; border-radius: 20px; margin-bottom: 30px;">
+                <h3 style="font-size: 1.8em; margin-bottom: 15px; color: var(--dark);">
+                    ❌ NO vendemos tus datos personales
+                </h3>
+                <p style="font-size: 1.2em; color: var(--gray);">
+                    Tu información solo se comparte en casos específicos necesarios para el funcionamiento de la app.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Servicios Necesarios</h3>
+                    <ul>
+                        <li>Firebase (Google) - Autenticación y base de datos</li>
+                        <li>Cloudinary - Almacenamiento seguro de imágenes</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Compartición Voluntaria</h3>
+                    <ul>
+                        <li>Precios de tiendas (anónimo)</li>
+                        <li>Productos compartidos con la comunidad</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Obligaciones Legales</h3>
+                    <ul>
+                        <li>Requerimientos de autoridades peruanas</li>
+                        <li>Protección de derechos legales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tus Derechos -->
+        <div class="section" id="derechos">
+            <div class="section-header">
+                <div class="section-icon">✅</div>
+                <h2>Tus Derechos</h2>
+            </div>
+
+            <p style="font-size: 1.2em; max-width: 800px; margin-bottom: 40px;">
+                Como usuario de BoletaPE, tienes control total sobre tu información:
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h3>Acceso</h3>
+                    <p>Ver toda la información que tenemos sobre ti en cualquier momento desde tu perfil.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">✏️</div>
+                    <h3>Corrección</h3>
+                    <p>Actualizar o corregir tus datos personales directamente desde la aplicación.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🗑️</div>
+                    <h3>Eliminación</h3>
+                    <p>Solicitar la eliminación completa de tu cuenta y todos tus datos permanentemente.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📦</div>
+                    <h3>Portabilidad</h3>
+                    <p>Exportar todos tus datos en formato CSV para usar en otras aplicaciones.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚫</div>
+                    <h3>Oposición</h3>
+                    <p>Desactivar notificaciones o funciones específicas según tus preferencias.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Revocación</h3>
+                    <p>Retirar permisos de ubicación, cámara o notificaciones en cualquier momento.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Permisos de la App -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🌍</div>
+                <h2>Permisos de la App</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📷</div>
+                    <h3>Cámara</h3>
+                    <p>Para escanear boletas y tomar fotos de comprobantes. Completamente opcional.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🖼️</div>
+                    <h3>Galería</h3>
+                    <p>Para seleccionar imágenes de comprobantes desde tu dispositivo. Opcional.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h3>Ubicación</h3>
+                    <p>Para mostrar tiendas cercanas y precios. Solo cuando lo actives manualmente.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔔</div>
+                    <h3>Notificaciones</h3>
+                    <p>Para enviarte alertas de presupuesto y recordatorios. Puedes desactivarlas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Internet</h3>
+                    <p>Para sincronizar datos y funciones en línea. Necesario para el funcionamiento.</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 1.1em; color: var(--gray);">
+                💡 Puedes gestionar todos estos permisos desde la configuración de tu dispositivo en cualquier momento.
+            </p>
+        </div>
+
+        <!-- Premium -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">💎</div>
+                <h2>Suscripción Premium</h2>
+            </div>
+
+            <div
+                style="background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); padding: 40px; border-radius: 20px;">
+                <h3 style="font-size: 1.5em; margin-bottom: 20px; color: var(--dark);">Si te suscribes a BoletaPE
+                    Premium:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li
+                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
+                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
+                        <span>Los pagos se procesan de forma segura</span>
+                    </li>
+                    <li
+                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
+                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
+                        <span>Guardamos el comprobante de pago que subas</span>
+                    </li>
+                    <li
+                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
+                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
+                        <span>Tu estado de suscripción se almacena en tu perfil</span>
+                    </li>
+                    <li
+                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
+                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
+                        <span>No almacenamos datos de tarjetas (pagos externos)</span>
+                    </li>
+                    <li style="padding: 15px 0; display: flex; align-items: center; gap: 10px;">
+                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
+                        <span>Puedes cancelar en cualquier momento</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Menores de Edad -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">👶</div>
+                <h2>Menores de Edad</h2>
+            </div>
+
+            <div style="background: var(--light-gray); padding: 35px; border-radius: 20px;">
+                <p style="font-size: 1.2em; color: var(--dark);">
+                    BoletaPE está diseñada para usuarios mayores de 18 años. No recopilamos intencionalmente información
+                    de menores de edad.
+                    Si descubrimos que un menor ha proporcionado información personal, eliminaremos esos datos de
+                    inmediato.
+                </p>
+            </div>
+        </div>
+
+        <!-- Eliminación de Datos -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🗑️</div>
+                <h2>Eliminación de Datos</h2>
+            </div>
+
+            <div
+                style="background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%); padding: 40px; border-radius: 20px; border-left: 5px solid #EF4444;">
+                <h3 style="font-size: 1.5em; margin-bottom: 20px; color: #991B1B;">Para eliminar tu cuenta y todos tus
+                    datos:</h3>
+                <ol style="font-size: 1.1em; color: #7F1D1D; line-height: 2;">
+                    <li>Ve a tu perfil en la app</li>
+                    <li>Selecciona "Eliminar cuenta"</li>
+                    <li>O envía un correo a soporte solicitando la eliminación</li>
+                </ol>
+                <p style="margin-top: 20px; font-size: 1.1em; color: #7F1D1D;">
+                    ⏱️ Todos tus datos serán eliminados permanentemente en un plazo máximo de 30 días.
+                </p>
+            </div>
+        </div>
+
+        <!-- Legislación -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">⚖️</div>
+                <h2>Legislación Aplicable</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🇵🇪</div>
+                    <h3>Ley Peruana</h3>
+                    <p>Ley N° 29733 - Ley de Protección de Datos Personales y su Reglamento (DS N° 003-2013-JUS).</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Estándares Internacionales</h3>
+                    <p>Cumplimos con GDPR (Europa) y mejores prácticas internacionales de protección de datos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cambios en la Política -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <h2>Cambios en esta Política</h2>
+            </div>
+
+            <p style="font-size: 1.1em; color: var(--gray); margin-bottom: 30px;">
+                Podemos actualizar esta política periódicamente. Te notificaremos sobre cambios importantes mediante:
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>En la App</h3>
+                    <p>Notificación push y mensaje al iniciar sesión.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📧</div>
+                    <h3>Por Email</h3>
+                    <p>Correo a tu cuenta registrada con los cambios.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>En esta Página</h3>
+                    <p>Actualización de la fecha en la parte superior.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section" id="contacto">
+            <h2>¿Tienes Preguntas?</h2>
+            <p>Estamos aquí para ayudarte con cualquier duda sobre tu privacidad</p>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📧</div>
+                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Email</p>
+                    <a href="mailto:privacidad@boletape.com">privacidad@boletape.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <div style="font-size: 2em; margin-bottom: 10px;">💬</div>
+                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">WhatsApp</p>
+                    <a href="https://wa.me/51999999999">+51 999 999 999</a>
+                </div>
+
+                <div class="contact-item">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📍</div>
+                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Ubicación</p>
+                    <a href="#">Lima, Perú 🇵🇪</a>
+                </div>
+
+                <div class="contact-item">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🕐</div>
+                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Horario</p>
+                    <a href="#">Lun - Vie, 9AM - 6PM</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 1em; opacity: 0.9;">
+                ⚡ Nos comprometemos a responder en un plazo máximo de 48 horas hábiles
+            </p>
+        </div>
+
+        <!-- Autoridad de Control -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🏛️</div>
+                <h2>Autoridad de Control</h2>
+            </div>
+
+            <div style="background: var(--light-gray); padding: 35px; border-radius: 20px;">
+                <p style="font-size: 1.1em; color: var(--dark); margin-bottom: 20px;">
+                    Si consideras que tus derechos de protección de datos han sido vulnerados, puedes presentar una
+                    queja ante:
+                </p>
+                <div
+                    style="background: white; padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">Autoridad Nacional de Protección de Datos
+                        Personales</h3>
+                    <p style="color: var(--gray);">Ministerio de Justicia y Derechos Humanos</p>
+                    <p style="color: var(--gray);">Lima, Perú</p>
+                    <p style="color: var(--gray); margin-top: 10px;">🌐 <a href="https://www.minjus.gob.pe"
+                            style="color: var(--primary); text-decoration: none;">www.minjus.gob.pe</a></p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="font-size: 2em; margin-bottom: 20px;">📱</div>
+            <h3 style="font-size: 1.8em; margin-bottom: 10px; color: white;">BoletaPE</h3>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">Control de Gastos Inteligente para Perú</p>
+
+            <div class="footer-links">
+                <a href="#informacion">Información</a>
+                <a href="#seguridad">Seguridad</a>
+                <a href="#derechos">Derechos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 30px;">
+                <p>© 2026 BoletaPE. Todos los derechos reservados.</p>
+                <p>Desarrollado con ❤️ en Perú 🇵🇪</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">Versión 1.0.0 | Última actualización: Febrero 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section, .card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add active state to nav on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
