@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - BoletaPE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <title>LaboraYa - Encuentra trabajo cerca de ti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
-            --primary: #2563EB;
-            --primary-dark: #1E40AF;
+            --primary: #2196F3;
+            --primary-dark: #1976D2;
             --secondary: #10B981;
             --dark: #0F172A;
             --gray: #64748B;
             --light-gray: #F1F5F9;
             --white: #FFFFFF;
         }
-
+        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
@@ -31,7 +29,7 @@
             background: var(--white);
             overflow-x: hidden;
         }
-
+        
         /* Navigation */
         nav {
             position: fixed;
@@ -42,7 +40,7 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-
+        
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -51,7 +49,7 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
@@ -60,7 +58,7 @@
             font-weight: 700;
             color: var(--dark);
         }
-
+        
         .logo-icon {
             width: 40px;
             height: 40px;
@@ -71,24 +69,24 @@
             justify-content: center;
             font-size: 20px;
         }
-
+        
         .nav-links {
             display: flex;
             gap: 30px;
             align-items: center;
         }
-
+        
         .nav-links a {
             color: var(--gray);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-
+        
         .nav-links a:hover {
             color: var(--primary);
         }
-
+        
         /* Hero Section */
         .hero {
             margin-top: 80px;
@@ -100,7 +98,7 @@
             align-items: center;
             justify-content: center;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
@@ -110,17 +108,12 @@
             background-size: 50px 50px;
             animation: moveGrid 20s linear infinite;
         }
-
+        
         @keyframes moveGrid {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            100% {
-                transform: translate(50px, 50px);
-            }
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
         }
-
+        
         .hero-content {
             position: relative;
             z-index: 2;
@@ -129,7 +122,7 @@
             max-width: 800px;
             padding: 40px;
         }
-
+        
         .hero h1 {
             font-size: 4em;
             font-weight: 800;
@@ -137,14 +130,14 @@
             line-height: 1.1;
             animation: fadeInUp 1s ease;
         }
-
+        
         .hero p {
             font-size: 1.4em;
             opacity: 0.95;
             margin-bottom: 40px;
             animation: fadeInUp 1s ease 0.2s both;
         }
-
+        
         .hero-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
@@ -155,63 +148,25 @@
             margin-bottom: 30px;
             animation: fadeInUp 1s ease 0.1s both;
         }
-
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
+        
         /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 80px 40px;
         }
-
-        /* Section */
-        .section {
-            margin-bottom: 80px;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .section-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-        }
-
-        .section h2 {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .section p {
-            font-size: 1.1em;
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-
+        
         /* Cards */
         .card-grid {
             display: grid;
@@ -219,7 +174,7 @@
             gap: 30px;
             margin-top: 40px;
         }
-
+        
         .card {
             background: white;
             border-radius: 20px;
@@ -227,13 +182,16 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-
+        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
         }
-
+        
         .card-icon {
             width: 50px;
             height: 50px;
@@ -245,128 +203,37 @@
             font-size: 24px;
             margin-bottom: 20px;
         }
-
+        
         .card h3 {
             font-size: 1.4em;
             font-weight: 600;
             margin-bottom: 15px;
             color: var(--dark);
         }
-
+        
         .card p {
             font-size: 1em;
             color: var(--gray);
             line-height: 1.6;
         }
-
-        .card ul {
-            list-style: none;
-            margin-top: 20px;
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
         }
-
-        .card li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--light-gray);
-            color: var(--gray);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .card li:last-child {
-            border-bottom: none;
-        }
-
-        .card li::before {
-            content: '✓';
-            color: var(--secondary);
+        
+        .section-header h2 {
+            font-size: 2.5em;
             font-weight: 700;
-            font-size: 18px;
-        }
-
-        /* Highlight Box */
-        .highlight-box {
-            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 40px 0;
-            border-left: 5px solid #F59E0B;
-        }
-
-        .highlight-box h3 {
-            color: #92400E;
-            font-size: 1.5em;
+            color: var(--dark);
             margin-bottom: 15px;
         }
-
-        .highlight-box p {
-            color: #78350F;
-            font-size: 1.1em;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 30px;
-            padding: 60px;
-            text-align: center;
-            color: white;
-            margin: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            top: -100px;
-            right: -100px;
-        }
-
-        .contact-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .contact-section p {
+        
+        .section-header p {
             font-size: 1.2em;
-            opacity: 0.95;
-            margin-bottom: 30px;
-            color: white;
+            color: var(--gray);
         }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .contact-item {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 15px;
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: scale(1.05);
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -374,599 +241,131 @@
             padding: 60px 40px 30px;
             text-align: center;
         }
-
+        
         footer p {
             color: var(--gray);
             margin: 10px 0;
         }
-
+        
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin: 30px 0;
         }
-
+        
         .footer-links a {
             color: var(--gray);
             text-decoration: none;
             transition: color 0.3s;
         }
-
+        
         .footer-links a:hover {
             color: white;
         }
-
-        /* Badge */
-        .badge {
-            display: inline-block;
-            background: var(--light-gray);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.9em;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
+        
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-container {
-                padding: 15px 20px;
-            }
-
             .nav-links {
                 display: none;
             }
-
+            
             .hero h1 {
                 font-size: 2.5em;
             }
-
+            
             .hero p {
                 font-size: 1.1em;
             }
-
+            
             .container {
                 padding: 40px 20px;
             }
-
-            .section h2 {
-                font-size: 1.8em;
-            }
-
+            
             .card-grid {
                 grid-template-columns: 1fr;
             }
-
-            .contact-section {
-                padding: 40px 25px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
         }
-
-        /* Smooth Scroll */
+        
         html {
             scroll-behavior: smooth;
         }
-
-        /* Scroll Animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
     </style>
 </head>
-
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <div class="logo-icon">📱</div>
-                <span>BoletaPE</span>
+                <div class="logo-icon">🔨</div>
+                <span>LaboraYa</span>
             </div>
             <div class="nav-links">
-                <a href="#informacion">Información</a>
-                <a href="#seguridad">Seguridad</a>
-                <a href="#derechos">Tus Derechos</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="terminos.html">Términos</a>
+                <a href="privacidad.html">Privacidad</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="hero-content">
-            <div class="hero-badge">📋 Política de Privacidad</div>
-            <h1>Tu privacidad es nuestra prioridad</h1>
-            <p>En BoletaPE protegemos tu información con los más altos estándares de seguridad</p>
+            <div class="hero-badge">🔨 LaboraYa</div>
+            <h1>Encuentra trabajo cerca de ti</h1>
+            <p>Conectamos trabajadores con oportunidades laborales en tiempo real</p>
         </div>
     </section>
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Intro -->
-        <div class="section">
-            <div class="badge">Última actualización: Febrero 2026</div>
-            <p style="font-size: 1.2em; color: var(--dark); max-width: 800px;">
-                BoletaPE es una aplicación móvil de control de gastos personales diseñada para usuarios en Perú.
-                Esta política explica de manera clara y transparente cómo recopilamos, usamos y protegemos tu
-                información.
-            </p>
+        <div class="section-header">
+            <h2>Información Legal</h2>
+            <p>Conoce nuestros términos y políticas de privacidad</p>
         </div>
-
-        <!-- Información que Recopilamos -->
-        <div class="section" id="informacion">
-            <div class="section-header">
-                <div class="section-icon">📊</div>
-                <h2>Información que Recopilamos</h2>
-            </div>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">👤</div>
-                    <h3>Datos de Cuenta</h3>
-                    <ul>
-                        <li>Nombre y apellido</li>
-                        <li>Correo electrónico</li>
-                        <li>Número de teléfono</li>
-                        <li>Contraseña encriptada</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">💰</div>
-                    <h3>Información Financiera</h3>
-                    <ul>
-                        <li>Gastos registrados</li>
-                        <li>Presupuestos y metas</li>
-                        <li>Categorías personalizadas</li>
-                        <li>Métodos de pago</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📸</div>
-                    <h3>Datos Opcionales</h3>
-                    <ul>
-                        <li>Fotos de boletas</li>
-                        <li>Ubicación (mapa)</li>
-                        <li>Notas personales</li>
-                        <li>Salario y ahorros</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📱</div>
-                    <h3>Información Técnica</h3>
-                    <ul>
-                        <li>Modelo de dispositivo</li>
-                        <li>Sistema operativo</li>
-                        <li>Versión de la app</li>
-                        <li>Datos de uso</li>
-                    </ul>
-                </div>
-            </div>
+        
+        <div class="card-grid">
+            <a href="terminos.html" class="card">
+                <div class="card-icon">�</div>
+                <h3>Términos y Condiciones</h3>
+                <p>Lee nuestros términos de uso y condiciones del servicio para usar LaboraYa</p>
+            </a>
+            
+            <a href="privacidad.html" class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Política de Privacidad</h3>
+                <p>Conoce cómo protegemos y usamos tu información personal</p>
+            </a>
         </div>
-
-        <!-- Cómo Usamos tu Información -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🎯</div>
-                <h2>Cómo Usamos tu Información</h2>
-            </div>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Funcionalidad</h3>
-                    <p>Registrar gastos, generar reportes personalizados, gestionar presupuestos y sincronizar datos en
-                        todos tus dispositivos.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🔔</div>
-                    <h3>Notificaciones</h3>
-                    <p>Enviarte alertas de presupuesto, recordatorios de gastos y notificaciones de ofertas en tiendas
-                        cercanas.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Análisis</h3>
-                    <p>Generar gráficos, estadísticas y reportes financieros para ayudarte a tomar mejores decisiones.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Seguridad</h3>
-                    <p>Prevenir fraudes, proteger tu cuenta y garantizar la integridad de tus datos personales.</p>
-                </div>
-            </div>
+        
+        <div class="section-header" style="margin-top: 100px;">
+            <h2>¿Qué es LaboraYa?</h2>
+            <p>Una plataforma que conecta trabajadores con empleadores</p>
         </div>
-
-        <!-- Seguridad -->
-        <div class="section" id="seguridad">
-            <div class="section-header">
-                <div class="section-icon">🔒</div>
-                <h2>Seguridad de tus Datos</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <h3>Busca Trabajos</h3>
+                <p>Encuentra trabajos cerca de ti en tiempo real según tu ubicación y habilidades</p>
             </div>
-
-            <p style="font-size: 1.2em; max-width: 800px;">
-                Implementamos múltiples capas de seguridad para proteger tu información:
-            </p>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">🔐</div>
-                    <h3>Encriptación</h3>
-                    <p>Todas las contraseñas están encriptadas y las comunicaciones usan HTTPS con certificados SSL/TLS.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">☁️</div>
-                    <h3>Firebase Security</h3>
-                    <p>Usamos Firebase Authentication y Firestore con reglas de seguridad estrictas certificadas
-                        internacionalmente.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Acceso Controlado</h3>
-                    <p>Solo tú puedes ver y modificar tus datos. Acceso restringido a personal autorizado únicamente.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">💾</div>
-                    <h3>Backups Automáticos</h3>
-                    <p>Copias de seguridad diarias y monitoreo 24/7 para detectar amenazas en tiempo real.</p>
-                </div>
+            
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <h3>Mapa Interactivo</h3>
+                <p>Ve trabajos disponibles en el mapa y filtra por categoría y distancia</p>
             </div>
-
-            <div class="highlight-box">
-                <h3>⚠️ Importante sobre Seguridad</h3>
-                <p>Aunque implementamos las mejores prácticas de seguridad, ningún sistema es 100% infalible. Te
-                    recomendamos usar contraseñas fuertes y no compartir tus credenciales con nadie.</p>
+            
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Chat Directo</h3>
+                <p>Comunícate directamente con empleadores y trabajadores de forma segura</p>
             </div>
-        </div>
-
-        <!-- Compartir Información -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🤝</div>
-                <h2>Compartir Información</h2>
-            </div>
-
-            <div style="background: var(--light-gray); padding: 40px; border-radius: 20px; margin-bottom: 30px;">
-                <h3 style="font-size: 1.8em; margin-bottom: 15px; color: var(--dark);">
-                    ❌ NO vendemos tus datos personales
-                </h3>
-                <p style="font-size: 1.2em; color: var(--gray);">
-                    Tu información solo se comparte en casos específicos necesarios para el funcionamiento de la app.
-                </p>
-            </div>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">🔧</div>
-                    <h3>Servicios Necesarios</h3>
-                    <ul>
-                        <li>Firebase (Google) - Autenticación y base de datos</li>
-                        <li>Cloudinary - Almacenamiento seguro de imágenes</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🗺️</div>
-                    <h3>Compartición Voluntaria</h3>
-                    <ul>
-                        <li>Precios de tiendas (anónimo)</li>
-                        <li>Productos compartidos con la comunidad</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">⚖️</div>
-                    <h3>Obligaciones Legales</h3>
-                    <ul>
-                        <li>Requerimientos de autoridades peruanas</li>
-                        <li>Protección de derechos legales</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tus Derechos -->
-        <div class="section" id="derechos">
-            <div class="section-header">
-                <div class="section-icon">✅</div>
-                <h2>Tus Derechos</h2>
-            </div>
-
-            <p style="font-size: 1.2em; max-width: 800px; margin-bottom: 40px;">
-                Como usuario de BoletaPE, tienes control total sobre tu información:
-            </p>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">👁️</div>
-                    <h3>Acceso</h3>
-                    <p>Ver toda la información que tenemos sobre ti en cualquier momento desde tu perfil.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">✏️</div>
-                    <h3>Corrección</h3>
-                    <p>Actualizar o corregir tus datos personales directamente desde la aplicación.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🗑️</div>
-                    <h3>Eliminación</h3>
-                    <p>Solicitar la eliminación completa de tu cuenta y todos tus datos permanentemente.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📦</div>
-                    <h3>Portabilidad</h3>
-                    <p>Exportar todos tus datos en formato CSV para usar en otras aplicaciones.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🚫</div>
-                    <h3>Oposición</h3>
-                    <p>Desactivar notificaciones o funciones específicas según tus preferencias.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <h3>Revocación</h3>
-                    <p>Retirar permisos de ubicación, cámara o notificaciones en cualquier momento.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Permisos de la App -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🌍</div>
-                <h2>Permisos de la App</h2>
-            </div>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">📷</div>
-                    <h3>Cámara</h3>
-                    <p>Para escanear boletas y tomar fotos de comprobantes. Completamente opcional.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🖼️</div>
-                    <h3>Galería</h3>
-                    <p>Para seleccionar imágenes de comprobantes desde tu dispositivo. Opcional.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📍</div>
-                    <h3>Ubicación</h3>
-                    <p>Para mostrar tiendas cercanas y precios. Solo cuando lo actives manualmente.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🔔</div>
-                    <h3>Notificaciones</h3>
-                    <p>Para enviarte alertas de presupuesto y recordatorios. Puedes desactivarlas.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🌐</div>
-                    <h3>Internet</h3>
-                    <p>Para sincronizar datos y funciones en línea. Necesario para el funcionamiento.</p>
-                </div>
-            </div>
-
-            <p style="margin-top: 30px; font-size: 1.1em; color: var(--gray);">
-                💡 Puedes gestionar todos estos permisos desde la configuración de tu dispositivo en cualquier momento.
-            </p>
-        </div>
-
-        <!-- Premium -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">💎</div>
-                <h2>Suscripción Premium</h2>
-            </div>
-
-            <div
-                style="background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); padding: 40px; border-radius: 20px;">
-                <h3 style="font-size: 1.5em; margin-bottom: 20px; color: var(--dark);">Si te suscribes a BoletaPE
-                    Premium:</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li
-                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
-                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
-                        <span>Los pagos se procesan de forma segura</span>
-                    </li>
-                    <li
-                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
-                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
-                        <span>Guardamos el comprobante de pago que subas</span>
-                    </li>
-                    <li
-                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
-                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
-                        <span>Tu estado de suscripción se almacena en tu perfil</span>
-                    </li>
-                    <li
-                        style="padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
-                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
-                        <span>No almacenamos datos de tarjetas (pagos externos)</span>
-                    </li>
-                    <li style="padding: 15px 0; display: flex; align-items: center; gap: 10px;">
-                        <span style="color: var(--secondary); font-size: 20px;">✓</span>
-                        <span>Puedes cancelar en cualquier momento</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Menores de Edad -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">👶</div>
-                <h2>Menores de Edad</h2>
-            </div>
-
-            <div style="background: var(--light-gray); padding: 35px; border-radius: 20px;">
-                <p style="font-size: 1.2em; color: var(--dark);">
-                    BoletaPE está diseñada para usuarios mayores de 18 años. No recopilamos intencionalmente información
-                    de menores de edad.
-                    Si descubrimos que un menor ha proporcionado información personal, eliminaremos esos datos de
-                    inmediato.
-                </p>
-            </div>
-        </div>
-
-        <!-- Eliminación de Datos -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🗑️</div>
-                <h2>Eliminación de Datos</h2>
-            </div>
-
-            <div
-                style="background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%); padding: 40px; border-radius: 20px; border-left: 5px solid #EF4444;">
-                <h3 style="font-size: 1.5em; margin-bottom: 20px; color: #991B1B;">Para eliminar tu cuenta y todos tus
-                    datos:</h3>
-                <ol style="font-size: 1.1em; color: #7F1D1D; line-height: 2;">
-                    <li>Ve a tu perfil en la app</li>
-                    <li>Selecciona "Eliminar cuenta"</li>
-                    <li>O envía un correo a soporte solicitando la eliminación</li>
-                </ol>
-                <p style="margin-top: 20px; font-size: 1.1em; color: #7F1D1D;">
-                    ⏱️ Todos tus datos serán eliminados permanentemente en un plazo máximo de 30 días.
-                </p>
-            </div>
-        </div>
-
-        <!-- Legislación -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">⚖️</div>
-                <h2>Legislación Aplicable</h2>
-            </div>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">🇵🇪</div>
-                    <h3>Ley Peruana</h3>
-                    <p>Ley N° 29733 - Ley de Protección de Datos Personales y su Reglamento (DS N° 003-2013-JUS).</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🌍</div>
-                    <h3>Estándares Internacionales</h3>
-                    <p>Cumplimos con GDPR (Europa) y mejores prácticas internacionales de protección de datos.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cambios en la Política -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🔄</div>
-                <h2>Cambios en esta Política</h2>
-            </div>
-
-            <p style="font-size: 1.1em; color: var(--gray); margin-bottom: 30px;">
-                Podemos actualizar esta política periódicamente. Te notificaremos sobre cambios importantes mediante:
-            </p>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">📱</div>
-                    <h3>En la App</h3>
-                    <p>Notificación push y mensaje al iniciar sesión.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📧</div>
-                    <h3>Por Email</h3>
-                    <p>Correo a tu cuenta registrada con los cambios.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🌐</div>
-                    <h3>En esta Página</h3>
-                    <p>Actualización de la fecha en la parte superior.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section" id="contacto">
-            <h2>¿Tienes Preguntas?</h2>
-            <p>Estamos aquí para ayudarte con cualquier duda sobre tu privacidad</p>
-
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📧</div>
-                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Email</p>
-                    <a href="mailto:privacidad@boletape.com">privacidad@boletape.com</a>
-                </div>
-
-                <div class="contact-item">
-                    <div style="font-size: 2em; margin-bottom: 10px;">💬</div>
-                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">WhatsApp</p>
-                    <a href="https://wa.me/51999999999">+51 999 999 999</a>
-                </div>
-
-                <div class="contact-item">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📍</div>
-                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Ubicación</p>
-                    <a href="#">Lima, Perú 🇵🇪</a>
-                </div>
-
-                <div class="contact-item">
-                    <div style="font-size: 2em; margin-bottom: 10px;">🕐</div>
-                    <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Horario</p>
-                    <a href="#">Lun - Vie, 9AM - 6PM</a>
-                </div>
-            </div>
-
-            <p style="margin-top: 40px; font-size: 1em; opacity: 0.9;">
-                ⚡ Nos comprometemos a responder en un plazo máximo de 48 horas hábiles
-            </p>
-        </div>
-
-        <!-- Autoridad de Control -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🏛️</div>
-                <h2>Autoridad de Control</h2>
-            </div>
-
-            <div style="background: var(--light-gray); padding: 35px; border-radius: 20px;">
-                <p style="font-size: 1.1em; color: var(--dark); margin-bottom: 20px;">
-                    Si consideras que tus derechos de protección de datos han sido vulnerados, puedes presentar una
-                    queja ante:
-                </p>
-                <div
-                    style="background: white; padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary);">
-                    <h3 style="color: var(--primary); margin-bottom: 10px;">Autoridad Nacional de Protección de Datos
-                        Personales</h3>
-                    <p style="color: var(--gray);">Ministerio de Justicia y Derechos Humanos</p>
-                    <p style="color: var(--gray);">Lima, Perú</p>
-                    <p style="color: var(--gray); margin-top: 10px;">🌐 <a href="https://www.minjus.gob.pe"
-                            style="color: var(--primary); text-decoration: none;">www.minjus.gob.pe</a></p>
-                </div>
+            
+            <div class="card">
+                <div class="card-icon">⭐</div>
+                <h3>Calificaciones</h3>
+                <p>Sistema de reputación confiable basado en trabajos completados</p>
             </div>
         </div>
     </div>
@@ -974,63 +373,37 @@
     <!-- Footer -->
     <footer>
         <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="font-size: 2em; margin-bottom: 20px;">📱</div>
-            <h3 style="font-size: 1.8em; margin-bottom: 10px; color: white;">BoletaPE</h3>
-            <p style="font-size: 1.1em; margin-bottom: 30px;">Control de Gastos Inteligente para Perú</p>
-
+            <div style="font-size: 2em; margin-bottom: 20px;">🔨</div>
+            <h3 style="font-size: 1.8em; margin-bottom: 10px; color: white;">LaboraYa</h3>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">Encuentra trabajo cerca de ti</p>
+            
             <div class="footer-links">
-                <a href="#informacion">Información</a>
-                <a href="#seguridad">Seguridad</a>
-                <a href="#derechos">Derechos</a>
-                <a href="#contacto">Contacto</a>
+                <a href="terminos.html">Términos y Condiciones</a>
+                <a href="privacidad.html">Política de Privacidad</a>
             </div>
-
+            
             <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 30px;">
-                <p>© 2026 BoletaPE. Todos los derechos reservados.</p>
-                <p>Desarrollado con ❤️ en Perú 🇵🇪</p>
-                <p style="margin-top: 15px; font-size: 0.9em;">Versión 1.0.0 | Última actualización: Febrero 2026</p>
+                <p>Email: laboraya@gmail.com</p>
+                <p>Teléfono: +51 982 257 569</p>
+                <p>Lima, Perú 🇵🇪</p>
+                <p style="margin-top: 20px;">© 2026 LaboraYa. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll for navigation links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section, .card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Add active state to nav on scroll
+        // Nav shadow on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
@@ -1041,5 +414,4 @@
         });
     </script>
 </body>
-
 </html>
